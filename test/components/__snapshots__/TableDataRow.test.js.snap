@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <TableDataRow/> Debe de hacer match con el snapshot 1`] = `
+<div>
+  <tr>
+    <td>
+      <img
+        class="logo_producto_financiero"
+        src="https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg"
+        width="100"
+      />
+    </td>
+    <td>
+      Tarjetas de Crédito
+    </td>
+    <td>
+      Tarjeta de consumo bajo la modalidad de crédito
+    </td>
+    <td>
+      01/02/2023
+    </td>
+    <td>
+      01/02/2024
+    </td>
+    <td>
+      <div>
+        <button
+          aria-describedby="popup-1"
+        >
+          <i
+            class="bx bx-dots-vertical-rounded "
+          />
+        </button>
+      </div>
+    </td>
+  </tr>
+</div>
+`;

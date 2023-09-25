@@ -1,0 +1,89 @@
+#container__tabla_productos_financieros {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+.tabla_productos_financieros {
+  width: 100%;
+  margin: auto;
+  background-color: #ffffff;
+  text-align: left;
+  padding: 25px;
+}
+
+.tabla_productos_financieros thead {
+  background-color: #f9fafc;
+
+  padding: 10px;
+  height: 70px;
+  font-weight: 600;
+}
+
+.tabla_productos_financieros thead tr th:nth-child(1),
+.tabla_productos_financieros tbody tr td:nth-child(1) {
+  text-align: center;
+}
+
+.tabla_productos_financieros tbody tr td {
+  padding-top: 10px;
+}
+
+.logo_producto_financiero {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: #c0c7d9;
+  object-fit: cover;
+}
+
+#head_row,
+#extra_information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#extra_information {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+#select_pagination {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 7px;
+  width: 60px;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bx-dots-vertical-rounded {
+  font-size: 1.5rem;
+}
+.bxs-info-circle.bx-flip-horizontal {
+  font-size: 1.5rem;
+  vertical-align: bottom;
+  color: #929296;
+}
+
+.popup_menu {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 10px 15px 10px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0px 10px 15px 10px rgba(204, 204, 204, 1);
+  box-shadow: 0px 10px 15px 10px rgba(204, 204, 204, 1);
+  border-radius: 12px;
+}
