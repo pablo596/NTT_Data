@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { FormularioProductoFinanciero } from '../../src/views';
 
 describe('Pruebas en <FormularioProductoFinanciero/>', () => {
-  test('Debe de registrar los datos del formulario si el formulario es válido', () => {
+  test('Debe de registrar los datos del formulario si el formulario es válido', async () => {
     const id = 'trj-crd';
     const name = 'Tarjetas de Crédito';
     const description = 'Tarjeta de consumo bajo la modalidad de crédito';
@@ -30,7 +30,9 @@ describe('Pruebas en <FormularioProductoFinanciero/>', () => {
     fireEvent.input(date_revisionInput, { target: { value: date_revision } });
 
     fireEvent.submit(formInput);
-    const jsdomAlert = window.alert; // remember the jsdom alert
-    window.alert = () => {};
+    await screen.findByRole('alert');
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'Registro actualizado satisfactoriamente'
+    );
   });
 });

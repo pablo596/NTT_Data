@@ -16,6 +16,11 @@ export const TablaProductosFinancieros = () => {
   const [searchInputValue, setSearchInputValue] = useState('');
   const debouncedValue = useDebounce(searchInputValue, 500);
 
+  /**
+   * Maneja el cambio en el valor de búsqueda.
+   * @param {Event} event - El evento de cambio de input.
+   */
+
   const handleChange = (event) => {
     setSearchInputValue(event.target.value);
   };
@@ -38,10 +43,7 @@ export const TablaProductosFinancieros = () => {
     return () => {};
   }, [productosFinancieros]);
 
-  // Fetch API (optional)
   useEffect(() => {
-    // Do fetch here...
-    // Triggers when "debouncedValue" changes
     if (searchInputValue || filterPerPage) {
       setProductosFinancierosList(
         productosFinancieros
@@ -62,9 +64,18 @@ export const TablaProductosFinancieros = () => {
     }
   }, [debouncedValue, filterPerPage]);
 
+  /**
+   * Navega a la página de formulario de productos financieros.
+   */
+
   const handleNavigateFormulario = () => {
     navigate('/formulario-productos-financieros');
   };
+
+  /**
+   * Elimina un registro de productos financieros.
+   * @param {number} id - El ID del registro a eliminar.
+   */
 
   const eliminarRegistro = async (id) => {
     const { status } = await deleteProductosFinancieros(id);

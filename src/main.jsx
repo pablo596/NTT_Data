@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
+import './App.css';
 import './components/TextField.css';
 import './views/TablaProductosFinancieros.css';
 import './views/FormularioProductoFinanciero.css';

@@ -1,4 +1,3 @@
-import '../App.css';
 import { TablaProductosFinancieros } from '../views';
 
 export const ProductosFinancierosPage = () => {

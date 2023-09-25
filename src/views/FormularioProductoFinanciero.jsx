@@ -58,6 +58,13 @@ const formValidations = {
   ],
 };
 
+/**
+ * @param {Object} props - Propiedades del componente.
+ * @param {Object} props.state - Estado inicial del formulario (para edición).
+ * @param {Function} props.navigate - Función de navegación para redirigir a otras páginas.
+ * @returns {JSX.Element} El elemento de React que representa el formulario de productos financieros.
+ */
+
 // eslint-disable-next-line react/prop-types
 export const FormularioProductoFinanciero = ({ state, navigate }) => {
   const {
@@ -88,16 +95,29 @@ export const FormularioProductoFinanciero = ({ state, navigate }) => {
     date_revision: date_revision,
   });
 
+  /**
+   * Maneja el envío del formulario.
+   * @param {Event} event - El evento de envío del formulario.
+   */
   const onSubmit = (event) => {
     event.preventDefault();
+    console.log('es 1');
     setFormSubmitted(true);
+    console.log('es 2');
     if (!isFormValid) return;
+    console.log('es 3');
     if (state?.id) {
+      console.log('es 4');
       actualizarRegistro();
     } else {
       enviarRegistro();
+      console.log('es 5');
     }
   };
+
+  /**
+   * Actualiza un registro de productos financieros.
+   */
   const actualizarRegistro = async () => {
     const { status } = await putProductosFinancieros({
       id,
@@ -115,6 +135,7 @@ export const FormularioProductoFinanciero = ({ state, navigate }) => {
     }
   };
   const enviarRegistro = async () => {
+    console.log('llega aqui?');
     const { status } = await postProductosFinancieros({
       id,
       name,
@@ -123,8 +144,10 @@ export const FormularioProductoFinanciero = ({ state, navigate }) => {
       date_release: formatDate(valuesForForm.date_release.toUTCString()),
       date_revision: formatDate(valuesForForm.date_revision.toUTCString()),
     });
+    console.log('status', status);
     if (status === 200) {
       alert('Registro Satisfactorio.');
+      console.log('llega aqui?');
       navigate(-1);
     } else {
       alert('Ocurrió un proble, intente nuevamente.');

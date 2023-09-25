@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../App.css';
+
 import { FormularioProductoFinanciero } from '../views';
 
 export const FormularioProducttoFinancieroPage = () => {
